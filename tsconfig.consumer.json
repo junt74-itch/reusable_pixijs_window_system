@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "reusable-pixijs-window-system": ["./dist/index.d.ts"]
+    }
+  },
+  "include": ["examples/consumer/**/*.ts"]
+}

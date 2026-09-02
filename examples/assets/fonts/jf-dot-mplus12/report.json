@@ -1,0 +1,35 @@
+{
+  "id": "jf-dot-mplus12",
+  "source": "JF-Dot-MPlus12.ttf",
+  "family": "JF Dot M+ 12",
+  "pixel_size": 12,
+  "rasterization_mode": "embedded-bitmap",
+  "embedded_strikes": [
+    {
+      "ppem_x": 12,
+      "ppem_y": 12,
+      "bit_depth": 1
+    }
+  ],
+  "selected_strike": {
+    "ppem_x": 12,
+    "ppem_y": 12,
+    "bit_depth": 1
+  },
+  "charset_count": 7150,
+  "glyph_count": 7122,
+  "missing_count": 28,
+  "missing_cmap_count": 28,
+  "missing_bitmap_count": 0,
+  "page_count": 1,
+  "atlas_size": 2048,
+  "max_atlas_size": 4096,
+  "padding": 1,
+  "validation": {
+    "page_dimensions": true,
+    "rgba_white": true,
+    "binary_alpha": true,
+    "glyph_bounds": true,
+    "glyph_overlap": true
+  }
+}

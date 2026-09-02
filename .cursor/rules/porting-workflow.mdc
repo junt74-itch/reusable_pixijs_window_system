@@ -1,0 +1,30 @@
+---
+description: PixiJS 移植の役割分担と進行ルール（Grok 仕様、Compose 実装）
+alwaysApply: true
+---
+
+# Porting workflow
+
+このリポジトリは Phaser 版 window system の PixiJS 移植である。基準は `PORTING_BASELINE.md` と `Reusable PixiJS Window System 移植・開発方針.md`。
+
+## 役割
+
+- **Grok 4.6**: 仕様、`docs/PROGRESS.md`、タスク票、レビュー。大規模実装をしない。
+- **Compose 2.5**: `docs/tasks/<ID>.md` の範囲だけ実装する。同じ変更でテストを足す。
+- **人間**: 公開 API 破壊、MVP 増減、ライセンス、Three.js 共有 context を標準にするか。同じ失敗が 3 巡続いた設計変更。
+
+## 禁止
+
+- `phaser` 依存、`any` や偽 Phaser 型でエンジン依存を隠すこと
+- 仕様根拠のない公開 API 変更
+- 複数 Phase の同時実装
+- silent fallback（font / glyph / skin / host 不備は typed error）
+- 互換性マップに無い機能追加（`docs/BACKLOG.md` へ送る）
+- 検証できない完了宣言
+
+## 進行
+
+1. 次タスクは `docs/PROGRESS.md` と `docs/tasks/` を正とする
+2. 実装は 1 タスク ID だけ。対象 / 非対象 / 受入条件 / 実行コマンドを守る
+3. 曖昧さは推測で広げず、選択肢を返して停止する
+4. 合格後だけ PROGRESS のチェックボックスを更新する

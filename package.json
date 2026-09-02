@@ -1,0 +1,38 @@
+{
+  "name": "reusable-pixijs-window-system",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "bun@1.4.0",
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "bun test",
+    "test:unit": "bun test tests/scaffold.test.ts tests/core tests/pixi tests/skin tests/examples tests/host tests/input tests/text tests/message tests/command tests/log tests/selection tests/scroll tests/layout tests/focus tests/a11y",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "test:package": "bun test tests/package",
+    "typecheck:consumer": "tsc --noEmit -p tsconfig.consumer.json",
+    "test:smoke": "bun test tests/smoke",
+    "check": "bun run test:unit && bun run typecheck && bun run build && bun run test:package && bun run typecheck:consumer && bun run test:smoke"
+  },
+  "peerDependencies": {
+    "pixi.js": ">=8.20.1 <9"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.0",
+    "pixi.js": "8.20.1",
+    "three": "0.185.1",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  }
+}

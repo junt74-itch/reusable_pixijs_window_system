@@ -1,0 +1,29 @@
+{
+  "upstreamUrl": "https://github.com/junt74-itch/reusable_pixel_font_builder",
+  "upstreamCommit": "20fa374ba24d3d70ff7437ab39532f28261f45f5",
+  "fontId": "jf-dot-mplus12",
+  "sourceRelativeDir": "dist\\jf-dot-mplus12",
+  "syncedAt": "2026-08-29T03:49:29.325Z",
+  "files": [
+    {
+      "file": "font.png",
+      "sha256": "2bfb0685c6bd2e6e5582c02a7327e9f6a2446b4169dac720b4c7aebaab6e2d14"
+    },
+    {
+      "file": "font.xml",
+      "sha256": "a442df2003c789d31c2d9ff5c75a582d4cdcebf2e2afec3dcbd3a7c8298bde0f"
+    },
+    {
+      "file": "report.json",
+      "sha256": "73f3a01fa955867fb3c261b460726f285a7f7308afb9f24b516957a2ef91f482"
+    },
+    {
+      "file": "missing-characters.txt",
+      "sha256": "03b925a858a5c087282e1af863015deb7566a9c04db797947d6ec02fe8cf0381"
+    },
+    {
+      "file": "license.txt",
+      "sha256": "53c10fd58f3eca6b7d3179f081a402e2fe7a81c9ecbbdcae99615c770b3a85d7"
+    }
+  ]
+}
