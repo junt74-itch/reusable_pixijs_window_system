@@ -7,7 +7,7 @@ export interface BitmapFontAsset {
 
 /**
  * Sandbox-only default bitmap font paths for this repository's internal examples
- * (`examples/assets/fonts/jf-dot-mplus12/`), resolved against the current document URL.
+ * (`examples/assets/fonts/jf-dot-mplus12/`), resolved against Vite's deployment base.
  *
  * Do not copy these URLs into consumer projects. Define your own {@link BitmapFontAsset}
  * with URLs from your asset pipeline, call `Assets.load` before constructing windows,
@@ -18,6 +18,6 @@ export interface BitmapFontAsset {
  */
 export const DEFAULT_BITMAP_FONT_ASSET: BitmapFontAsset = {
   key: "jf-dot-mplus12",
-  textureURL: new URL("examples/assets/fonts/jf-dot-mplus12/font.png", document.baseURI).href,
-  fontDataURL: new URL("examples/assets/fonts/jf-dot-mplus12/font.xml", document.baseURI).href,
+  textureURL: `${import.meta.env.BASE_URL ?? "/"}examples/assets/fonts/jf-dot-mplus12/font.png`,
+  fontDataURL: `${import.meta.env.BASE_URL ?? "/"}examples/assets/fonts/jf-dot-mplus12/font.xml`,
 };
